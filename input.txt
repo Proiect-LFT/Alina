@@ -1,0 +1,41 @@
+CREATE TABLE Persons (
+    PersonID int,
+    LastName varchar(255),
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+
+DROP TABLE Shippers;
+
+DELETE FROM Customers;
+
+DELETE FROM Customers WHERE CustomerName='Alfreds';
+
+INSERT INTO Customers ( ID, FirstName, LastName ) 
+VALUES ( '1', 'User', 'Test' );
+
+INSERT INTO Customers
+VALUES ( '1', 'User', 'Test' );
+
+ALTER TABLE Customers
+ADD Email varchar(255);
+
+ALTER TABLE Customers
+DROP COLUMN Email;
+
+ALTER TABLE Customers
+RENAME COLUMN Email TO EmailAddress;
+
+ALTER TABLE Customers
+ALTER COLUMN Email varchar(100);
+
+ALTER TABLE Customers
+MODIFY COLUMN Email varchar(100);
+
+ALTER TABLE Customers
+MODIFY Email varchar(100);
+
+UPDATE Customers
+SET ContactName = 'Alfred', City = 'Frankfurt'
+WHERE CustomerID = 1;
